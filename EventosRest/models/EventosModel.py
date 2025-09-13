@@ -32,3 +32,16 @@ class Salida(BaseModel):
 
 class EventoSalida(Salida):
     evento: vEventos|None = None
+
+class EventosSalida(Salida):
+    eventos: list[vEventos]|None = None 
+
+class EventoUpdate(SQLModel):
+    nombre:Optional[str]=None
+    cantidadparticipantes:Optional[int]=None
+    descripcion:Optional[str]=None
+    idtipo:Optional[int]=None
+    iddepartamento:Optional[int]=None
+
+
+
